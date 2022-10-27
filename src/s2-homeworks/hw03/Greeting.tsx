@@ -1,6 +1,7 @@
 import React, {ChangeEvent, KeyboardEvent} from 'react'
 import s from './Greeting.module.css'
 
+
 type GreetingPropsType = {
     name: string // need to fix any
     setNameCallback: (event: ChangeEvent<HTMLInputElement>)=> void  // need to fix any
@@ -9,7 +10,7 @@ type GreetingPropsType = {
     onEnter: (e:KeyboardEvent<HTMLInputElement>)=> void  // need to fix any
     error: string // need to fix any
     totalUsers: number // need to fix any
-    lastUserName?: string // need to fix any
+    lastUserName?: string// need to fix any
 }
 
 // презентационная компонента (для верстальщика)
