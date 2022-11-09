@@ -10,6 +10,11 @@ const Stand = () => {
 
     const [stateForAllCheckboxes, setChecked] = useState<boolean>(false)
 
+
+    const onEnterHandler =()=>{
+        setError(stateForAllInputs.trim() ? '' : 'Error')
+        setValue('')
+    }
     return (
         <div id={'hw4-stand'} className={s.stand}>
             <div className={s.inputs}>
@@ -28,14 +33,7 @@ const Stand = () => {
                         value={stateForAllInputs}
                         onChangeText={setValue}
                         error={error}
-                        onEnter={() => {
-                            setError(
-                                stateForAllInputs.trim()
-                                    ? ''
-                                    : 'Error'
-                            )
-                            setValue('')
-                        }}
+                        onEnter={onEnterHandler}
                     />
                 </div>
             </div>
@@ -58,8 +56,7 @@ const Stand = () => {
                     <SuperButton
                         id={'hw4-super-button-disabled'}
                         xType={'red'}
-                        disabled
-                    >
+                        disabled>
                         disabled
                     </SuperButton>
                 </div>
