@@ -19,9 +19,7 @@ const arr = [
 
 const HW7 = () => {
     const [value, onChangeOption] = useState(1) // селект и радио должны работать синхронно
-const onChange=(event: any)=>{
-    console.log(event.currentTarget.value)
-}
+
     return (
         <div id={'hw7'}>
             <div className={s2.hwTitle}>Homework #7</div>
@@ -35,7 +33,7 @@ const onChange=(event: any)=>{
                             options={arr}
                             value={value}
                             onChangeOption={onChangeOption}
-                            onChange={onChange}
+
                         />
                     </div>
                     <div>

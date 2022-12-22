@@ -2,7 +2,7 @@ import React, {
     ChangeEvent,
     InputHTMLAttributes,
     DetailedHTMLProps,
-    HTMLAttributes, useState,
+    HTMLAttributes,
 } from 'react'
 import s from './SuperRadio.module.css'
 
@@ -54,8 +54,8 @@ const SuperRadio: React.FC<SuperRadioPropsType> = ({
                       className={finalRadioClassName}
                       type={'radio'}
                       // name, checked, value делают студенты
-             value={o}
-                      checked={o=== value}
+             value={o.value}
+                      checked={o.value=== value}
                       name={name}
                       onChange={onChangeCallback}
                       {...restProps}
