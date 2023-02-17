@@ -13,10 +13,10 @@ function Clock() {
         // пишут студенты // запустить часы (должно отображаться реальное время, а не +1)
         // сохранить ид таймера (https://learn.javascript.ru/settimeout-setinterval#setinterval)
 
-        const Id = setInterval( ()=>{
+        const Id = +setInterval( ()=>{
             setDate(new Date())
         }, 1000)
-        setTimerId(+Id)
+        setTimerId(Id)
 
     }
 
