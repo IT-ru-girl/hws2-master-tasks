@@ -51,7 +51,7 @@ setShow(false)
 
     // день недели на английском, месяц на английском (https://learn.javascript.ru/intl#intl-datetimeformat)
 
-    let getDay = new Intl.DateTimeFormat("en",{
+    let getDay = new Intl.DateTimeFormat('en-US',{
         weekday: 'long'
     });
     const stringDay = getDay.format(date) || <br/> // пишут студенты
