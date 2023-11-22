@@ -1,19 +1,15 @@
-
-
-
+import {AppStoreType} from '../../hw10/bll/store';
 
 
 
 
 const initState = {
-    themeId: 1,
+    themeId :1
 }
 
-export type InitialStateType ={
-    themeId: number
-}
 
-export const themeReducer = (state = initState, action: ChangeTypeIdType): InitialStateType => { // fix any
+
+export const themeReducer = (state = initState, action: ChangeTypeIdType): typeof initState => { // fix any
     switch (action.type) {
         case 'SET_THEME_ID':
        return {...state, themeId: action.id}
@@ -26,6 +22,6 @@ export const changeThemeId = (id: number): ChangeTypeIdType =>
     ({ type: 'SET_THEME_ID', id }) // fix any
 
 export type ChangeTypeIdType= {
-    type: string,
+    type: 'SET_THEME_ID',
     id: number
 }
