@@ -18,12 +18,24 @@ const themes = [
     {id: 3, value: 'dark'},
 ]
 
+export type StateThemes = {
+    themes: ThemeType[]
+}
+
+export type ThemeType ={
+    id:number,
+    value: string
+}
+
 const HW12 = () => {
+
+    const dispatch=useDispatch()
     // взять ид темы из редакса
-    const themeId = 1
+    const state = useSelector<StateThemes,ThemeType[]>((state) => state.themes)
+const themeId =1
 
-    const change = (id: any) => { // дописать функцию
-
+    const change = (id: number) => { // дописать функцию
+dispatch(changeThemeId(id))
     }
 
     useEffect(() => {
@@ -41,7 +53,7 @@ const HW12 = () => {
                     id={'hw12-select-theme'}
                     className={s.select}
                     // сделать переключение тем
-
+                    onChangeOption={change}
                 />
             </div>
         </div>
